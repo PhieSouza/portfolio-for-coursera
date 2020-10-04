@@ -1,0 +1,207 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+    font-size: 12px;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* HEADER */
+nav {
+    line-height: 75px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgb(107, 107, 107);
+    margin-bottom: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.2em;
+    display: inline-block;
+    margin: 0 50px 0 50px;
+}
+
+.header-h1 > a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3em;
+    margin-left: 35px;
+    margin-right: 35px;
+    float: left;
+}
+
+.main-header > .a-header > li > a:hover {
+    transition: all 0.1s;
+    font-size: 2.4em;
+    color: rgb(192, 23, 23);
+}
+
+.main-header > .a-header > li > a:active {
+    transition: all 0.05s;
+    color: rgb(122, 12, 122);
+}
+
+.header-h1 > a:hover{
+    transition: all 0.5s;
+    margin-left: 45px;
+    color: rgb(255, 255, 2550, 0.7);
+}
+
+.checkbtn{
+    display: none;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 75px;
+    cursor: pointer;
+    margin-right: 5%;
+}
+
+#check {
+    display: none;
+}
+
+/*END HEADER*/
+
+/*Content*/
+.main-title {
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.main-content {
+    margin: 25px;
+}
+
+.main-img > img {
+    display: block;
+    float: left;
+    width: 30%;
+    border-radius: 25%;
+    border: 1px black solid;
+}
+
+.main-img > img:hover {
+    transition: all 1s;
+    opacity: 0.7;
+    border-radius: 40%;
+}
+
+.main-text {
+    line-height: 1.8em;
+    font-size: 1.8em;
+    padding: 10px;
+    text-align: center;
+    height: 270px;
+    display: table;
+}
+
+.main-text > p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/*Content END*/
+
+/*Gadgets*/
+#covid, #map, #calendar {
+    width: 33%;
+    float: left;
+    margin-bottom: 5%;
+}
+
+/*Footer*/
+
+footer {
+    background: black;
+    height: 100px;
+    width: 100%;
+    display: table;
+    margin-top: 25px;
+}
+
+footer > p {
+    color: white;
+    font-size: 1.5em;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    
+    /* Header */
+     .checkbtn{
+        display: block;
+    }
+
+    nav ul li a{
+        display: none;
+    }
+
+    nav ul li a:hover{
+        background-color: rgb(255, 255, 255, 0.8);
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        clear: both;
+    }
+
+    #check:checked ~ ul li a {
+        display: block;
+    }
+
+    /* Main Content*/
+    .main-img > img {
+        float: none;
+        margin: 25px auto;
+        width: 90%;
+        border-radius: 0;
+    }
+
+    .main-text {
+        text-align: justify;
+        font-size: 1.6em;
+    }
+
+    #calendar {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    #map {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    #covid {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+}
