@@ -158,10 +158,8 @@ footer > p {
 
     nav ul li a{
         display: none;
-    }
-
-    nav ul li a:hover{
-        background-color: rgb(255, 255, 255, 0.8);
+        border-bottom: white 1px solid;
+        text-shadow: 1px 1px 0px white;
     }
 
     nav ul li{
